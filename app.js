@@ -524,7 +524,8 @@ function sendTextMessage(recipientId, messageText) {
       id: recipientId
     },
     message: {
-      text: 'Hi there! I have a couple keywords "hello", "baseball", "basketball", "bears"',
+      text: 'Hi there! I have a couple keywords to showcase my abilities "hello", "baseball", "basketball", "bears", "button", "generic",' +
+      '"audio", "image", "file", "gif", "video", "typing on", "typing off", "receipt", "quick reply"',
       metadata: "DEVELOPER_DEFINED_METADATA"
     }
   };
