@@ -1,6 +1,6 @@
 {
-    "appSecret": "",
-    "pageAccessToken": "",
-    "validationToken": "",
-    "serverURL": ""
+    "appSecret": "472f43ee5f47d821e3b600922c407b37",
+    "pageAccessToken": "EAADah5QTZBn4BAJtl351X53QpQ0HthFKC57PF75AhxuN2nEM6FOZBIpF9C16XsksvPtz3NBZAmX7txuYGZAyUd7splFtjgkNo3WrPvx1ceWzYUSCN881oQvLKFTMGqYVngZCZBbVaIIZCGZBGWFsYjyLqJCQ5O1gwe1w4pFx4sbVDwZDZD",
+    "validationToken": "andrew_benintendi_mookie_betts_jackie_bradley",
+    "serverURL": "https://creed-test-bot.herokuapp.com/"
 }
