@@ -524,10 +524,24 @@ function sendTextMessage(recipientId, messageText) {
       id: recipientId
     },
     message: {
-      text: 'Hi Corbin!',
+      text: 'Hi there! I have a couple keywords "hello", "baseball", "basketball", "bears"',
       metadata: "DEVELOPER_DEFINED_METADATA"
     }
   };
+  var buildString = '';
+  if (messageText.indexOf('hello') > -1) {
+    buildString += 'What\'s up?';
+  } if (messageText.indexOf('baseball') > -1) {
+    buildString += 'Killer Bees: Benintendi, Betts, Bradley, Bogaerts';
+  } if (messageText.indexOf('hello') > -1) {
+    buildString += 'Ball is life';
+  } if (messageText.indexOf('hello') > -1) {
+    buildString += 'Bears, Beets, Battlestar Galactica';
+  }
+
+  if (buildString.length) {
+    messageData.message.text = buildString;
+  }
 
   callSendAPI(messageData);
 }
