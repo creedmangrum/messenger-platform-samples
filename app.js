@@ -533,9 +533,9 @@ function sendTextMessage(recipientId, messageText) {
     buildString += 'What\'s up?';
   } if (messageText.indexOf('baseball') > -1) {
     buildString += 'Killer Bees: Benintendi, Betts, Bradley, Bogaerts';
-  } if (messageText.indexOf('hello') > -1) {
+  } if (messageText.indexOf('basketball') > -1) {
     buildString += 'Ball is life';
-  } if (messageText.indexOf('hello') > -1) {
+  } if (messageText.indexOf('bears') > -1) {
     buildString += 'Bears, Beets, Battlestar Galactica';
   }
 
