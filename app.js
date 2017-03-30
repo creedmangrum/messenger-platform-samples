@@ -254,61 +254,59 @@ function receivedMessage(event) {
     // If we receive a text message, check to see if it matches any special
     // keywords and send back the corresponding example. Otherwise, just echo
     // the text we received.
-    switch (messageText) {
-      case 'image':
-        sendImageMessage(senderID);
-        break;
+    if (messageText.indexOf('image') > -1) {
+      sendImageMessage(senderID);
 
-      case 'gif':
-        sendGifMessage(senderID);
-        break;
 
-      case 'audio':
-        sendAudioMessage(senderID);
-        break;
+     } if (messageText.indexOf('gif') > -1) {
+      sendGifMessage(senderID);
 
-      case 'video':
-        sendVideoMessage(senderID);
-        break;
 
-      case 'file':
-        sendFileMessage(senderID);
-        break;
+     } if (messageText.indexOf( 'audio') > -1) {
+      sendAudioMessage(senderID);
 
-      case 'button':
-        sendButtonMessage(senderID);
-        break;
 
-      case 'generic':
-        sendGenericMessage(senderID);
-        break;
+     } if (messageText.indexOf( 'video') > -1) {
+      sendVideoMessage(senderID);
 
-      case 'receipt':
-        sendReceiptMessage(senderID);
-        break;
 
-      case 'quick reply':
-        sendQuickReply(senderID);
-        break;
+     } if (messageText.indexOf( 'file') > -1) {
+      sendFileMessage(senderID);
 
-      case 'read receipt':
-        sendReadReceipt(senderID);
-        break;
 
-      case 'typing on':
-        sendTypingOn(senderID);
-        break;
+     } if (messageText.indexOf( 'button') > -1) {
+      sendButtonMessage(senderID);
 
-      case 'typing off':
-        sendTypingOff(senderID);
-        break;
 
-      case 'account linking':
-        sendAccountLinking(senderID);
-        break;
+     } if (messageText.indexOf( 'generic') > -1) {
+      sendGenericMessage(senderID);
 
-      default:
-        sendTextMessage(senderID, messageText);
+
+     } if (messageText.indexOf( 'receipt') > -1) {
+      sendReceiptMessage(senderID);
+
+
+     } if (messageText.indexOf( 'quick reply') > -1) {
+      sendQuickReply(senderID);
+
+
+     } if (messageText.indexOf( 'read receipt') > -1) {
+      sendReadReceipt(senderID);
+
+
+     } if (messageText.indexOf( 'typing on') > -1) {
+      sendTypingOn(senderID);
+
+
+     } if (messageText.indexOf( 'typing off') > -1) {
+      sendTypingOff(senderID);
+
+
+     } if (messageText.indexOf( 'account linking') > -1) {
+      sendAccountLinking(senderID);
+
+    } else {
+      sendTextMessage(senderID, messageText);
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
